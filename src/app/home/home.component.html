@@ -1,0 +1,14 @@
+<div class="text-center">
+<h1>Angular NGRX</h1>
+    <div class="container mt-4">
+        <h2 class="mb-4">Top 10 Features of NgRx</h2>
+        <ul class="list-group">
+            @for (feature of ngrxFeatures; track feature) {
+            <li class="list-group-item">
+                <strong>{{ ngrxFeatures.indexOf(feature) + 1 }}. {{ feature.title }}:</strong>
+                {{ feature.description }}
+            </li>
+            }
+        </ul>
+    </div>
+</div>

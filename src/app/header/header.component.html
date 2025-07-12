@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  ml-3">
+  <a class="navbar-brand" style="font-size: 3rem;font-weight: 500; margin-left: 2rem;">NGRX</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse  ml-3" id="navbarNav">
+    <ul class="navbar-nav" style="font-size: 1.5rem;">
+      <li class="nav-item active">
+        <p class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active" >Home</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/counter']" routerLinkActive="router-link-active" >Counter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"[routerLink]="['/posts']" routerLinkActive="router-link-active" >Post</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,26 @@
+<div class="post-container">
+    <div class="post-header">
+        <h2 class="post-header text-center">Post List </h2>
+    </div>
+    <div class="post-table mx-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(postData of (post$ | async); track postData.id){
+                <tr>
+                    <td>{{postData.id}}</td>
+                    <td>{{postData.title}}</td>
+                    <td>{{postData.description}}</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
