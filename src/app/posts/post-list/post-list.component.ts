@@ -5,10 +5,11 @@ import { Observable } from 'rxjs';
 import { Post } from '../model/post.model';
 import { getPost } from '../store/post.selectors';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss'
 })

@@ -1,26 +1,32 @@
-<div class="post-container">
-    <div class="post-header">
-        <h2 class="post-header text-center">Post List </h2>
-    </div>
-    <div class="post-table mx-5">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-            @for(postData of (post$ | async); track postData.id){
-                <tr>
-                    <td>{{postData.id}}</td>
-                    <td>{{postData.title}}</td>
-                    <td>{{postData.description}}</td>
-                </tr>
-            }
-            </tbody>
-        </table>
+<div class="post-container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="post-header">
+                <h2 class="post-header text-center">Post List </h2>
+            </div>
+            <div class="post-table mx-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(postData of (post$ | async); track postData.id){
+                        <tr>
+                            <td>{{postData.id}}</td>
+                            <td>{{postData.title}}</td>
+                            <td>{{postData.description}}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
-
