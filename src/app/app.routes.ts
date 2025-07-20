@@ -7,7 +7,11 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
 export const routes: Routes = [
     {path: '', redirectTo:'home', pathMatch:'full'},
     {path:'home', component:HomeComponent},
-    {path:'counter', component:CounterComponent},
+    // {path:'counter', component:CounterComponent},
+    {path:'counter',
+        loadComponent:() => 
+            import('./counter-module/counter/counter.component').then(m => m.CounterComponent)
+    },
     {path:'posts', component:PostListComponent,
     children:[
         {path:'', component:AddPostComponent}
